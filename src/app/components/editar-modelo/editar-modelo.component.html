@@ -1,0 +1,16 @@
+<div class="h-100 d-flex flex-column justify-content-evenly">
+    <h2 class="mb-5">Editar modelo</h2>
+    <app-modelo (novoModelo)="atualizarModelo($event)" [dados$]="dados$"></app-modelo>
+    <div class="w-75 mx-auto mt-5">
+        <div class="d-flex bd-highlight mb-3">
+            <button (click)="removerModelo()" class="me-auto p-2 bd-highlight btn btn-danger py-2 w-25">Excluir</button>
+            <button
+                [routerLink]="['/modelos']"
+                class="p-2 bd-highlight btn btn-secondary py-2 w-25"
+            >
+                Cancelar
+            </button>
+            <button (click)="solicitarDados()" class="p-2 bd-highlight btn btn-primary py-2 ms-3 w-25">Atualizar</button>
+        </div>
+    </div>
+</div>

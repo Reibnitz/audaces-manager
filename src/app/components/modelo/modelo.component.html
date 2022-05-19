@@ -1,0 +1,88 @@
+<p *ngIf="invalid" class="text-center text-danger">
+    Formulário incompleto. Favor verificar os dados
+</p>
+<div class="d-flex flex-column align-items-center">
+    <form [formGroup]="form" class="row g-4 w-75">
+        <div class="col-md-6">
+            <input
+                class="form-control p-2"
+                type="text"
+                placeholder="Nome do modelo"
+                formControlName="nome"
+            />
+        </div>
+        <div class="col-md-6">
+            <input
+                class="form-control p-2"
+                type="text"
+                placeholder="Responsável pela coleção"
+                formControlName="responsavel"
+            />
+        </div>
+        <div class="col-md-6">
+            <select formControlName="tipo" class="form-select p-2">
+                <option selected>Tipo do modelo</option>
+                <option *ngFor="let tipo of tipos" [value]="tipo">
+                    {{ tipo }}
+                </option>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <select formControlName="colecao" class="form-select p-2">
+                <option selected>Selecionar coleção</option>
+                <option
+                    *ngFor="let item of colecoes$ | async"
+                    [value]="item.id"
+                >
+                    {{ item.nome }}
+                </option>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <p>Possui bordado?</p>
+            <div class="form-check form-check-inline">
+                <input
+                    class="form-check-input"
+                    value="1"
+                    type="radio"
+                    id="bordado-true"
+                    formControlName="bordado"
+                />
+                <label class="form-check-label" for="bordado-true">Sim</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input
+                    class="form-check-input"
+                    value="0"
+                    type="radio"
+                    id="bordado-false"
+                    formControlName="bordado"
+                />
+                <label class="form-check-label" for="bordado-false">Não</label>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <p>Possui estampa?</p>
+            <div class="form-check form-check-inline">
+                <input
+                    class="form-check-input"
+                    value="1"
+                    type="radio"
+                    id="estampa-true"
+                    formControlName="estampa"
+                />
+                <label class="form-check-label" for="estampa-true">Sim</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input
+                    class="form-check-input"
+                    value="0"
+                    type="radio"
+                    id="estampa-false"
+                    formControlName="estampa"
+                />
+                <label class="form-check-label" for="estampa-false">Não</label>
+            </div>
+        </div>
+    </form>
+</div>

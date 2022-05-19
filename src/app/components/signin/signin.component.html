@@ -1,0 +1,23 @@
+<div class="container bg-white p-5 rounded-3 my-5">
+    <h1 class="text-center">Sign In</h1>
+    <p>Insira suas credenciais para acessar sua conta</p>
+    <p *ngIf="invalid" class="text-danger">Usuário e/ou senha inválidos</p>
+    <form [formGroup]="form">
+        <input
+            formControlName="username"
+            type="text"
+            placeholder="Informe seu e-mail"
+            class="mb-3 form-control"
+        />
+        <input
+            formControlName="password"
+            type="password"
+            placeholder="Informe sua senha"
+            class="mb-3 form-control"
+        />
+        <button type="submit" class="btn btn-primary mt-3 py-2" style="width:100%;" (click)="verificar()">
+            Entrar
+        </button>
+    </form>
+</div>
+<p class="text-center">Esqueceu sua senha? <a [routerLink]="['recuperar-senha']">Redefinir senha</a></p>

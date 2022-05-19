@@ -1,0 +1,132 @@
+{
+  "modelos": [
+    {
+      "nome": "Modelo 1",
+      "responsavel": "Lucas",
+      "tipo": "Bolsa",
+      "colecao": 1,
+      "bordado": false,
+      "estampa": true,
+      "id": 1
+    },
+    {
+      "nome": "Modelo 2",
+      "responsavel": "Lucas",
+      "tipo": "Bermuda",
+      "colecao": 2,
+      "bordado": false,
+      "estampa": true,
+      "id": 2
+    },
+    {
+      "nome": "Modelo 3",
+      "responsavel": "Lucas",
+      "tipo": "Calçados",
+      "colecao": 1,
+      "bordado": true,
+      "estampa": false,
+      "id": 3
+    },
+    {
+      "nome": "Modelo 4",
+      "responsavel": "Lucas",
+      "tipo": "Calçados",
+      "colecao": 3,
+      "bordado": false,
+      "estampa": true,
+      "id": 4
+    },
+    {
+      "nome": "Modelo 5",
+      "responsavel": "Lucas",
+      "tipo": "Boné",
+      "colecao": 8,
+      "bordado": true,
+      "estampa": false,
+      "id": 5
+    },
+    {
+      "nome": "Modelo 6",
+      "responsavel": "Lucas",
+      "tipo": "Calça",
+      "colecao": 6,
+      "bordado": false,
+      "estampa": false,
+      "id": 6
+    }
+  ],
+  "colecoes": [
+    {
+      "nome": "Coleção 1",
+      "responsavel": "Lucas",
+      "estacao": "Primavera",
+      "marca": "DEVinModa",
+      "orcamento": 1233,
+      "ano": 2022,
+      "id": 1
+    },
+    {
+      "nome": "Coleção 2",
+      "responsavel": "Lucas",
+      "estacao": "Inverno",
+      "marca": "Lucas&Lucas",
+      "orcamento": 4321,
+      "ano": 2023,
+      "id": 2
+    },
+    {
+      "nome": "Coleção 3",
+      "responsavel": "Lucas",
+      "estacao": "Verão",
+      "marca": "Audaces",
+      "orcamento": 9999,
+      "ano": 2022,
+      "id": 3
+    },
+    {
+      "nome": "Coleção 4",
+      "responsavel": "Lucas",
+      "estacao": "Outono/Inverno",
+      "marca": "Audaces",
+      "orcamento": 6543,
+      "ano": 2022,
+      "id": 4
+    },
+    {
+      "nome": "Coleção 5",
+      "responsavel": "Lucas",
+      "estacao": "Primavera/Verão",
+      "marca": "Audaces",
+      "orcamento": 9876,
+      "ano": 2022,
+      "id": 5
+    },
+    {
+      "nome": "Coleção 6",
+      "responsavel": "Lucas",
+      "estacao": "Verão",
+      "marca": "Audaces",
+      "orcamento": 12345,
+      "ano": 2022,
+      "id": 6
+    },
+    {
+      "nome": "Coleção 7 ",
+      "responsavel": "Lucas",
+      "estacao": "Inverno",
+      "marca": "Audaces",
+      "orcamento": 1000,
+      "ano": 2023,
+      "id": 7
+    },
+    {
+      "nome": "Coleção 8",
+      "responsavel": "Lucas",
+      "estacao": "Outono",
+      "marca": "Audaces",
+      "orcamento": 2500,
+      "ano": 2023,
+      "id": 8
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+<div class="d-flex justify-content-between">
+    <h2>Coleções</h2>
+    <button class="btn btn-primary" [routerLink]="['nova-colecao']">
+        Criar Coleção
+    </button>
+</div>
+
+<div class="my-5">
+    <div class="table-responsive">
+        <table class="table align-middle table-hover">
+            <thead>
+                <tr style="height:4em">
+                    <th class="text-center" scope="col-3">ColeçãoID</th>
+                    <th class="text-center" scope="col-3">Nome da coleção</th>
+                    <th class="text-center" scope="col-3">Estação e lançamento</th>
+                    <th class="text-center" scope="col-3">Responsável</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr
+                    *ngFor="let colecao of colecoes$ | async"
+                    role="button"
+                    (click)="editar(colecao.id)"
+                    style="height:4em"
+                >
+                    <td class="text-center fw-bold">{{ colecao.id | number:'3.0-0' }}</td>
+                    <td class="text-center">{{ colecao.nome }}</td>
+                    <td class="text-center">{{ colecao.estacao + ' ' + colecao.ano }}</td>
+                    <td class="text-center">{{ colecao.responsavel }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

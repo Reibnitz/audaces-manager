@@ -1,0 +1,24 @@
+<p *ngIf="invalid" class="text-center text-danger">Formulário incompleto. Favor verificar os dados</p>
+<div class="d-flex flex-column align-items-center">
+    <form [formGroup]="form" class="row g-4 w-75">
+        <div class="col-md-6">
+            <input formControlName="nome" class="form-control p-2" type="text" placeholder="Nome da coleção">
+        </div>
+        <div class="col-md-6">
+            <input formControlName="responsavel" class="form-control p-2" type="text" placeholder="Responsável pela coleção">
+        </div>
+        <div class="col-md-6">
+            <input formControlName="estacao" class="form-control p-2" type="text" placeholder="Para qual estação?">
+        </div>
+        <div class="col-md-6">
+            <input formControlName="marca" class="form-control p-2" type="text" placeholder="Para qual marca você está criando?">
+        </div>
+        <div class="col-md-6">
+            <input formControlName="orcamento" class="form-control p-2" type="number" placeholder="Qual é o orçamento desta coleção">
+        </div>
+        <div class="col-md-6">
+            <input formControlName="ano" class="form-control p-2" type="number" placeholder="Ano de lançamento">
+        </div>
+    </form>
+    <img class="mt-5" [src]="img">
+</div>

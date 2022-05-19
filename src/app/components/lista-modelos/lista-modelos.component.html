@@ -1,0 +1,34 @@
+<div class="d-flex justify-content-between">
+    <h2>Modelos</h2>
+    <button class="btn btn-primary" [routerLink]="['novo-modelo']">
+        Criar Modelo
+    </button>
+</div>
+
+<div class="my-5">
+    <div class="table-responsive">
+        <table class="table align-middle table-hover">
+            <thead>
+                <tr style="height:4em">
+                    <th class="text-center" scope="col-3">ModeloID</th>
+                    <th class="text-center" scope="col-3">Nome do modelo</th>
+                    <th class="text-center" scope="col-3">Coleção</th>
+                    <th class="text-center" scope="col-3">Responsável</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr
+                    *ngFor="let modelo of modelos$ | async"
+                    role="button"
+                    (click)="editar(modelo.id)"
+                    style="height:4em"
+                >
+                    <td class="fw-bold text-center">{{ modelo.id | number:'3.0-0' }}</td>
+                    <td class="text-center">{{ modelo.nome }}</td>
+                    <td class="text-center">{{ modelo.colecao | colecao | async }}</td>
+                    <td class="text-center">{{ modelo.responsavel }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

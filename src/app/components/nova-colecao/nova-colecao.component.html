@@ -1,0 +1,10 @@
+<div class="h-100 d-flex flex-column justify-content-evenly">
+    <h2 class="mb-5">Criar coleção</h2>
+    <app-colecao (novaColecao)="registrarColecao($event)"></app-colecao>
+    <div class="w-75 mx-auto mt-5">
+        <div class="d-flex justify-content-end">
+            <button [routerLink]="['/colecoes']" class="btn btn-secondary py-2 w-25">Cancelar</button>
+            <button (click)="solicitarDados()" class="btn btn-primary py-2 w-25 ms-3">Salvar</button>
+        </div>
+    </div>
+</div>

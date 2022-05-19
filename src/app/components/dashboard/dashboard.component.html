@@ -1,0 +1,41 @@
+<div class="container">
+    <h1><strong>Bem-vindo,</strong> {{ usuario }}</h1>
+    <p>Acompanhe a visão geral de suas coleções</p>
+    <div class="d-flex justify-content-around my-5">
+        <div class="rounded-3 text-center py-2" style="width:25%; background-color:#EBF0FA">
+            <p>Coleções</p>
+            <h1>{{ quantidadeColecoes }}</h1>
+        </div>
+        <div class="rounded-3 text-center py-2" style="width:25%; background-color:#EBF0FA">
+            <p>Modelos</p>
+            <h1>{{ quantidadeModelos }}</h1>
+        </div>
+        <div class="rounded-3 text-center py-2" style="width:25%; background-color:#EBF0FA">
+            <p>Orçamento médio por coleção</p>
+            <h1>{{ orcamentoMedio | orcamento }}</h1>
+        </div>
+    </div>
+    <div class="my-5">
+        <h1>Maiores orçamentos</h1>
+        <div class="table-responsive">
+            <table class="table align-middle table-hover">
+                <thead>
+                    <tr style="height:4em">
+                        <th class="text-center" scope="col">ColeçãoID</th>
+                        <th class="text-center" scope="col">Nome da coleção</th>
+                        <th class="text-center" scope="col">Orçamento</th>
+                        <th class="text-center" scope="col">Responsável</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let colecao of colecoes$ | async | ordenarLista | slice:0:5" style="height:4em">
+                        <td class="fw-bold text-center">{{ colecao.id | number:'3.0-0'}}</td>
+                        <td class="text-center">{{ colecao.nome }}</td>
+                        <td class="text-center">{{ colecao.orcamento | orcamento }}</td>
+                        <td class="text-center">{{ colecao.responsavel }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,78 @@
+<div
+    class="w-100 mx-3 pt-3 px-4 border-end sticky-top"
+    style="height: 100vh; background-color: #fefefe"
+>
+    <nav class="bd-sidebar">
+        <div>
+            <div class="d-flex flex-column align-items-center">
+                <img [src]="logo" class="mb-2" style="max-width:64px"/>
+                <p><strong>AudacesManager</strong></p>
+            </div>
+
+            <ul class="list-unstyled">
+                <li class="px-2">
+                    <button
+                        class="btn btn-link text-start text-decoration-none w-100"
+                        style="color: #6a7090"
+                        routerLinkActive="active-route"
+                        [routerLink]="['/home']"
+                        role="button"
+                    >
+                        Dashboard
+                    </button>
+                </li>
+            </ul>
+            <p class="text-black-50">CADASTROS</p>
+            <ul class="list-unstyled">
+                <li class="px-2">
+                    <button
+                        class="btn btn-link text-start text-decoration-none w-100"
+                        style="color: #6a7090"
+                        routerLinkActive="active-route"
+                        [routerLink]="['/colecoes']"
+                        role="button"
+                    >
+                        Coleções
+                    </button>
+                </li>
+                <li class="px-2">
+                    <button
+                        class="btn btn-link text-start text-decoration-none w-100"
+                        style="color: #6a7090"
+                        routerLinkActive="active-route"
+                        [routerLink]="['/modelos']"
+                        role="button"
+                    >
+                        Modelos
+                    </button>
+                </li>
+            </ul>
+            <p class="text-black-50">SUPORTE</p>
+            <ul class="list-unstyled">
+                <li class="px-2">
+                    <button
+                        class="btn btn-link text-start text-decoration-none w-100"
+                        style="color: #6a7090"
+                    >
+                        Obter ajuda
+                    </button>
+                </li>
+                <li class="px-2">
+                    <button
+                        class="btn btn-link text-start text-decoration-none w-100"
+                        style="color: #6a7090"
+                    >
+                        Enviar comentários
+                    </button>
+                </li>
+            </ul>
+            <a
+                class="btn btn-link text-start text-decoration-none position-absolute bottom-0 pb-5 px-2"
+                style="color: #6a7090"
+                (click)="logout()"
+                role="button"
+                >Logout</a
+            >
+        </div>
+    </nav>
+</div>
